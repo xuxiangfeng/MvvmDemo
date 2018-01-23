@@ -19,15 +19,6 @@ public abstract class BaseActivity<T extends ViewDataBinding> extends Activity {
 
     protected T mBinding;
 
-    private Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            if(msg.obj != null && msg.obj instanceof Runnable){
-                ((Runnable)msg.obj).run();
-            }
-        }
-    };
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,22 +30,5 @@ public abstract class BaseActivity<T extends ViewDataBinding> extends Activity {
     protected void initView(Intent intent){};
     public void initModel(T t){}
     public abstract int getLayoutId();
-
-
-    protected void runOnUIThread(Runnable runnable){
-        mHandler.post(runnable);
-    }
-
-    protected void runOnUIThreadDelay(Runnable runnable,int delay){
-        mHandler.postDelayed(runnable,delay);
-    }
-
-    protected void runOnUIThreadWithTag(int tag,Runnable runnable){
-        mHandler.sendMessage(mHandler.obtainMessage(tag,runnable));
-    }
-
-    protected void stopUIThread(int tag){
-        mHandler.removeMessages(tag);
-    }
 
 }

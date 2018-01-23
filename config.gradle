@@ -1,0 +1,15 @@
+ext{
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.1"
+    minSdkVersion     = 17
+    targetSdkVersion  = 25
+
+    appcompatV7 = "com.android.support:appcompat-v7:$rootProject.ext.buildToolsVersion"
+    picasso = 'com.squareup.picasso:picasso:2.5.2'
+    retrofit = 'com.squareup.retrofit2:retrofit:2.3.0'
+    rxAndroid = 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    rxJava = 'io.reactivex.rxjava2:rxjava:2.1.8'
+    converterGson = 'com.squareup.retrofit2:converter-gson:2.3.0'
+    adapterRxjava = 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    eventBus = 'org.greenrobot:eventbus:3.1.1'
+}

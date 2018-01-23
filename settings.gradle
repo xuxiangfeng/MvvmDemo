@@ -1,1 +1,1 @@
-include ':mainmodule'
+include ':mainmodule', ':common', ':httplib'

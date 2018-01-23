@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" >
     <data>
         <variable
-            name="vm"
-            type="cn.xxf.mvvm.demo.viewmodel.MainVM" />
+            name="mainPres"
+            type="cn.xxf.mvvm.demo.viewmodel.presenter.MainPres" />
         <variable
             name="user"
-            type="cn.xxf.mvvm.demo.model.UserModel" />
+            type="cn.xxf.mvvm.demo.viewmodel.UserVM" />
     </data>
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="add"
-            android:onClick="@{()->vm.addCount(user)}"/>
+            android:onClick="@{()->mainPres.addCount(user)}"/>
 
         <Button
             android:layout_width="wrap_content"
